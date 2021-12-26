@@ -32,17 +32,21 @@ function show_product(products) {
   for (var product of products) {
     product_list.innerHTML += `
     <div class="col-6 col-sm-4 col-lg-3 mt-3 p-3 product">
-    <div class="product-img">
+    <div onclick = "detail()" class="product-img">
         <img src="${product.img}" alt="Product">
     </div>
-    <div class="product-name">${product.name}</div>
-    <div class="product-price">${product.price} VNĐ</div>
+    <div class="product-name newprimary" onclick = "detail()">${product.name}</div>
+    <div class="product-price" onclick = "detail()">${product.price} VNĐ</div>
     <div class="text-end">
-        <button onclick="add_to_cart(this.id)" id="${product.id}" class="btn btn-primary btn-sm">Add to Cart</button>
+        <button onclick="add_to_cart(this.id)" id="${product.id}" class="btn btn-primary btn-sm ">Add to Cart</button>
     </div>
 </div>
     `;
   }
+}
+
+function detail() {
+  window.location.href = `detail.html`
 }
 
 function add_to_cart(product_id) {
