@@ -93,10 +93,9 @@
       padding-bottom: 5px;
       width: 50%;
       
+      
 }
-.ft__inner {
-    color: white;
-}
+
 .ft__input__box textarea {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
