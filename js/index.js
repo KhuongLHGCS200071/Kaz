@@ -148,12 +148,13 @@ function login(e) {
 
 function login_success() {
   var account_info = document.getElementById("account-info");
+  var account_hello = document.getElementById("account-hello");
   var username = localStorage.getItem("account_username");
   account_info.innerHTML = `
-  <button class="btn ms-3 disabled text-dark">Hello ${username}!</button>
   <a href="cart.html" class="btn btn-primary border-0 me-2">Cart (<span id="cart-quantity">0</span>)</a>
   <button onclick="logout()" class="btn btn-danger border-0">Logout</button>
   `;
+  account_hello.innerHTML = `<button class="btn ms-3 disabled text-dark">Hello ${username}!</button>`;
 }
 
 function logout() {
