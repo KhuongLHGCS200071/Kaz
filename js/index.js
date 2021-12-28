@@ -159,9 +159,12 @@ function login_success() {
 
 function logout() {
   var account_info = document.getElementById("account-info");
+  var account_hello = document.getElementById("account-hello");
   localStorage.setItem("account_id", "");
   localStorage.setItem("account_username", "");
+  account_hello.innerHTML = `<button class="btn ms-3 disabled text-dark"></button>`;
   account_info.innerHTML = `
+  
   <button class="btn btn-primary border-0 me-1" data-bs-toggle="modal" data-bs-target="#frm-login">Login</button>
   <button class="btn btn-danger border-0" data-bs-toggle="modal" data-bs-target="#frm-signup">Sign Up</button>`;
 
